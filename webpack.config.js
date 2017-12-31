@@ -1,7 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/app.js',
+  context: path.resolve(__dirname, 'src'),
+  entry: './app.js',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
