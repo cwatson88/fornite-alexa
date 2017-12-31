@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "webpack -d -np-watch",
+    "watch": "webpack --progress --watch",
+    "start": "webpack-dev-server --open",
+    "dev": "webpack -d --watch",
     "build": "webpack -p"
   },
   "keywords": [],
@@ -13,9 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.0.0-beta.34",
+    "alexa-sdk": "^1.0.24",
     "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
-    "eslint": "^4.14.0",
     "webpack": "^3.10.0"
   },
   "jest": {
@@ -31,9 +33,13 @@
     "babel-loader": "^8.0.0-beta.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "eslint": "^4.14.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "jest": "^21.2.1"
+    "jest": "^21.2.1",
+    "prettier": "^1.9.2",
+    "prettier-eslint": "^8.7.0",
+    "webpack-dev-server": "^2.9.7"
   },
   "repository": "https://github.com/cwatson88/fornite-alexa.git"
 }
