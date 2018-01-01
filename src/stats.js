@@ -13,6 +13,9 @@ const getStats = (platform, player) => {
     .then(res => console.log(res));
 };
 
+axios.request({
+  url:'https://api.apis.guru/v2/specs/weatherbit.io/2.0.0/swagger.json'
+}).then(res => console.log(res));
 
 getStats('xbl', 'BG Watson');
 
