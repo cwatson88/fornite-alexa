@@ -41,5 +41,8 @@
     "webpack-dev-server": "^2.9.7",
     "webpack": "^3.10.0"
   },
-  "repository": "https://github.com/cwatson88/fornite-alexa.git"
+  "repository": "https://github.com/cwatson88/fornite-alexa.git",
+  "quokka": {
+    "babel": true
+  }
 }

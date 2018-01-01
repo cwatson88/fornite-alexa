@@ -1,3 +1,6 @@
+({
+  babel: true,
+});
 
 import axios from 'axios';
 
