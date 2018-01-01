@@ -1,10 +1,10 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: './app.js',
-  devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
   },
@@ -12,18 +12,24 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  resolve: {
+    modules: ['./node_modules'],
+  },
+  plugins: [
+    new UglifyJsPlugin()
+  ],
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules)/,
+        exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    ],
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
   },
 };
